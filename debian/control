@@ -1,0 +1,12 @@
+Source: octopress
+Section: net
+Priority: extra
+Maintainer: Andre Ferraz <andre.ferraz@locaweb.com.br>
+Build-Depends: ruby1.9.1, ruby1.9.1-dev
+Standards-Version: 0.1
+Homepage: https://github.com/deferraz/octopress
+
+Package: octopress
+Architecture: any
+Depends: ruby1.9.1, bundler
+Description: Octopress is an obsessively designed framework for Jekyll blogging

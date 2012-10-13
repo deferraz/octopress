@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+
+DIR_NAME = "octopress"
+
+DEBIAN_PATH = "debian/#{DIR_NAME}/var/www/octopress/"
+
+DEBIAN_FILES = %w(README .bundle Gemfile .powrc Gemfile.lock Rakefile
+                  config.rb config.ru _config.yml script vendor .themes plugins)
+
+[DEBIAN_PATH, "debian/#{DIR_NAME}/var/www/octopress/tmp", "debian/#{DIR_NAME}/var/www/octopress/log"].each {|dir| FileUtils.mkdir_p(dir)}
+
+FileUtils.cp_r DEBIAN_FILES, DEBIAN_PATH, preserve: true
